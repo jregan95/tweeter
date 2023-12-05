@@ -1,5 +1,8 @@
 nav {
-  height: 120px;
+  
+  position: fixed;
+  
+  height: 100px;
   width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
@@ -8,6 +11,7 @@ nav {
   justify-content: space-between;
   flex-direction: row;
   align-items: baseline;
+  
   
 }
 

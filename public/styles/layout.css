@@ -32,3 +32,10 @@ body {
 .logo {
   font-family: 'Bungee', sans-serif;
 }
+
+main {
+  padding-top: 2em;
+  width: 90%;
+  margin: 0 auto;
+}
+
