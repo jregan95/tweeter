@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,300;0,600;1,300;1,600&display=swap");
+
+.main-humming {
+  font: bold;
+  outline: none;
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid;
+  background-color:  #f4f1ec;
+  font-family: "Soruce Sans 3", sans-serif;
+  display: flex;
+ 
+  
+  
+}
+
+
+
+.underneath {
+  font-family: "Bungee", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: baseline;
+}
+.button {
+  
+  background-color: #4682B4;
+  margin-top: 5px;
+
+}
+
