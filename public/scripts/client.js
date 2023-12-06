@@ -6,9 +6,7 @@
 
 
 $(document).ready(function() {
-
-
-
+  const $tweetContainer = $('#tweet-container')
 
    const createTweetElement = function(tweetObj) {
     const $tweet = $(
@@ -41,25 +39,41 @@ $(document).ready(function() {
   } 
 
   const renderTweets = function(tweetsArray) {
+    $tweetContainer.empty();
     for(const tweet of tweetsArray) {
       const $tweet = createTweetElement(tweet);
-      const $tweetContainer = $('#tweet-container')
       $tweetContainer.prepend($tweet)
     }
   }
 
- 
-  
- const getTweets = function() {$.ajax({
+  const loadTweets = function() {$.ajax({
     method: 'GET',
     url:'/tweets',
     success: (tweets) => {
       renderTweets(tweets);
     }
   })
-}
+  }
 
-getTweets();
+loadTweets();
+
+const $form = $('#new-tweet-submission-form');
+
+$form.on('submit', (event) => {
+  //Browser will not sbutmit the form 
+  event.preventDefault();
+  
+  const formTweet = $form.serialize();
+
+  $.ajax({
+    method: 'POST',
+    url: '/tweets',
+    data: formTweet,
+    success: () => {
+      loadTweets();
+    }
+  })
+})
  
 });
 
