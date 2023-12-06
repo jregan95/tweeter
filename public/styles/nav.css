@@ -1,5 +1,5 @@
+/* Navigation bar CSS */
 nav {
-  
   position: fixed;
   height: 100px;
   width: 100%;
@@ -9,16 +9,16 @@ nav {
   justify-content: space-between;
   flex-direction: row;
   align-items: flex-end;
-
-  
-  
 }
 
+/* Tweeter logo in nav bar */
 .logo {
   padding: 0em 0em 0em 1.5em;
+  font-size: larger;
 }
 
-.navTweet {
+/* write new tweet on right side of sav bar */
+.nav-tweet {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,6 +26,7 @@ nav {
   padding: 1.5em 1.5em .5em 0;
 }
 
-.navArrows {
+/* two red arrows underneath 'Write new Tweet'*/
+.nav-arrows {
   color: red;
 }

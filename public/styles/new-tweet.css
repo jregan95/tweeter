@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,300;0,600;1,300;1,600&display=swap");
 
-
+/* Section of main that will allow the user to input their new tweet to a form */
 .new-tweet {
   padding: 0px 0px 90px 0px;
 }
+
+
+/* New tweet form text box. Grandchild of new tweet*/
 .new-tweet-form {
   font: bold;
   outline: none;
@@ -16,7 +19,8 @@
 }
 
 
-
+/* This is underneath the text box that with tweet button and characher count.
+ Child of new tweet. Parent of the button and character count*/
 .underneath-textarea {
   font-family: "Bungee", sans-serif;
   display: flex;
@@ -25,11 +29,11 @@
   align-items: baseline;
   padding: 10px 0px 0px 0px;
 }
+
+/* Tweet 'submit' button. Child of underneath-textarea */
 .button {
-  
   background-color: #4682B4;
   margin-top: 5px;
-  color: #f4f1ec;
-
+  color: #f4f1ec
 }
 
