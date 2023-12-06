@@ -1,32 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,300;0,600;1,300;1,600&display=swap");
 
+
+.new-tweet {
+  padding: 0px 0px 90px 0px;
+}
 .new-tweet-form {
   font: bold;
   outline: none;
   width: 100%;
   border: none;
-  border-bottom: 3px solid;
+  border-bottom: 4px solid;
   background-color:  #f4f1ec;
   font-family: "Soruce Sans 3", sans-serif;
   display: flex;
- 
-  
-  
 }
 
 
 
-.underneath {
+.underneath-textarea {
   font-family: "Bungee", sans-serif;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: baseline;
+  padding: 10px 0px 0px 0px;
 }
 .button {
   
   background-color: #4682B4;
   margin-top: 5px;
+  color: #f4f1ec;
 
 }
 
