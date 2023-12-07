@@ -11,11 +11,13 @@ nav {
   align-items: flex-end;
 }
 
+
 /* Tweeter logo in nav bar */
 .logo {
   padding: 0em 0em 0em 1.5em;
   font-size: larger;
 }
+
 
 /* write new tweet on right side of sav bar */
 .nav-tweet {
@@ -25,6 +27,7 @@ nav {
   align-items: center;
   padding: 1.5em 1.5em .5em 0;
 }
+
 
 /* two red arrows underneath 'Write new Tweet'*/
 .nav-arrows {

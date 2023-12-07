@@ -30,20 +30,23 @@
   padding: 10px 0px 0px 0px;
 }
 
+
 /* Tweet 'submit' button. Child of underneath-textarea */
 .button {
   background-color: #4682B4;
   margin-top: 5px;
   color: #f4f1ec;
-  
 }
 
+
+/*When a user hovers their mouse over the tweet button the text turns black
+and and orange box shadow eases in*/
 .button:hover {
   color: rgba(22, 22, 22, 0.7);
   box-shadow: 3px 3px rgba(231, 179, 83, 0.775);
-  transition: all 0.5s ease-out;
-  
+  transition: all 0.2s ease-in;
 }
+
 
 /*this is for the error messages due to charactercount. The wiggle animation syntax is animation: name of 
 animation, the length it is played, and its iteration.*/  
@@ -53,6 +56,7 @@ animation, the length it is played, and its iteration.*/
   width: 60%;
   animation: wiggle 2s linear 1;
 }
+
 
 /*This defines the motion of the animation*/
 @keyframes wiggle {
