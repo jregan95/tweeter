@@ -1,4 +1,4 @@
-// Function that will count the mount of characters in the tweet text area.
+// Function that will count the maount of characters in the tweet text area.
 const countTweetCharacters = function() {
 
   //Sets the variable maxCharacterCount to equal the number displayed on the HTML form underneath the tweet form
@@ -20,11 +20,11 @@ const countTweetCharacters = function() {
 }
 
 $(document).ready(function() {
-  
+
+  //On any input to the submit tweet form it will execute the countTweetCharacter function
   $('.new-tweet-form').on('input', function(){
    countTweetCharacters();
   })
-
 
 });
 
