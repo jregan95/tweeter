@@ -13,6 +13,8 @@ $(document).ready(function() {
   
 
    const createTweetElement = function(tweetObj) {
+    
+    
     const $tweet = $(
       `<article class="view-tweet">
         <header class="view-tweet-header">
@@ -23,7 +25,7 @@ $(document).ready(function() {
             <span>${tweetObj['user']['handle']}</span>
         </header>
           <div class="view-tweet-content">
-            <p class="view-tweet-content-text">${tweetObj['content']['text']}</p>
+            <p class="view-tweet-content-text"></p>
           </div>
         <footer class="view-tweet-footer">
           <div>
@@ -37,6 +39,7 @@ $(document).ready(function() {
         </footer>
       </article>`
     );
+    $tweet.find('.view-tweet-content-text').text(tweetObj['content']['text'])
 
     return $tweet
 
@@ -44,6 +47,7 @@ $(document).ready(function() {
 
   const renderTweets = function(tweetsArray) {
     $tweetContainer.empty();
+    
     for(const tweet of tweetsArray) {
       const $tweet = createTweetElement(tweet);
       $tweetContainer.prepend($tweet)
@@ -60,7 +64,7 @@ $(document).ready(function() {
   })
   }
     
-console.log('line 63')
+
 loadTweets();
 
 const $form = $('#new-tweet-submission-form');
@@ -73,10 +77,15 @@ $form.on('submit', (event) => {
   const formTweetArray = $form.serializeArray();
   const characterLength = formTweetArray[0].value
   if(characterLength.length <  1) {
-    return alert('Uhhh... you need to actually type something');
+     $('.err-no-text').text('Uh please write something first??? Thx.');
+     $('.err-no-text').addClass('wiggle-animation');
+    return;
   }
+  
   if(characterLength.length >  140) {
-    return alert("Less wordz plz. K thx.")
+    $('.err-to-much-text').text('K... why u write a novel? Only 140 chracters plz.');
+    $('.err-to-much-text').addClass('wiggle-animation');
+    return;
   }
 
   
@@ -88,6 +97,10 @@ $form.on('submit', (event) => {
     data: formTweet,
     success: () => {
       loadTweets();
+      $('#new-tweet-submission-form').get(0).reset()
+      $('#max-count').text(140)
+      
+      
     }
   })
 })

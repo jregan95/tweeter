@@ -34,6 +34,48 @@
 .button {
   background-color: #4682B4;
   margin-top: 5px;
-  color: #f4f1ec
+  color: #f4f1ec;
+  
 }
 
+.button:hover {
+  color: rgba(22, 22, 22, 0.7);
+  box-shadow: 3px 3px rgba(231, 179, 83, 0.775);
+  transition: all 0.5s ease-out;
+  
+}
+
+/*this is for the error messages due to charactercount. The wiggle animation syntax is animation: name of 
+animation, the length it is played, and its iteration.*/  
+.wiggle-animation {
+  padding: 4px;
+  color: red;
+  width: 60%;
+  animation: wiggle 2s linear 1;
+}
+
+/*This defines the motion of the animation*/
+@keyframes wiggle {
+  /*These percentages indicate at what point in the animations
+  duraction will it be at certain degree*/
+  0%, 7%, 40%, 100% {
+    /*the transfrom property is set to rotate at a certain degree*/
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-5deg);
+  }
+  20% {
+    transform: rotateZ(2deg);
+  }
+  25% {
+    transform: rotateZ(-3deg);
+  }
+  30% {
+    transform: rotateZ(2deg);
+  }
+  35% {
+    transform: rotateZ(-2deg);
+  }
+  
+}
