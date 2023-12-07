@@ -5,8 +5,12 @@
  */
 
 
+
+
 $(document).ready(function() {
   const $tweetContainer = $('#tweet-container')
+
+  
 
    const createTweetElement = function(tweetObj) {
     const $tweet = $(
@@ -23,7 +27,7 @@ $(document).ready(function() {
           </div>
         <footer class="view-tweet-footer">
           <div>
-            <span>${tweetObj['created_at']}</span>
+            <span class='time'>${tweetObj['created_at']}</span>
           </div>
           <div>
             <i class="fa-solid fa-flag"></i>
@@ -44,6 +48,7 @@ $(document).ready(function() {
       const $tweet = createTweetElement(tweet);
       $tweetContainer.prepend($tweet)
     }
+    
   }
 
   const loadTweets = function() {$.ajax({
@@ -54,7 +59,8 @@ $(document).ready(function() {
     }
   })
   }
-
+    
+console.log('line 63')
 loadTweets();
 
 const $form = $('#new-tweet-submission-form');
@@ -64,7 +70,18 @@ $form.on('submit', (event) => {
   event.preventDefault();
   
   const formTweet = $form.serialize();
+  const formTweetArray = $form.serializeArray();
+  const characterLength = formTweetArray[0].value
+  if(characterLength.length <  1) {
+    return alert('Uhhh... you need to actually type something');
+  }
+  if(characterLength.length >  140) {
+    return alert("Less wordz plz. K thx.")
+  }
 
+  
+
+  
   $.ajax({
     method: 'POST',
     url: '/tweets',
