@@ -6,6 +6,8 @@ $(document).ready(function() {
   $('#new-tweet-submission-form').keypress(function() {
     $('.err-to-much-text').text(''); 
     $('.err-no-text').text('');
+
+    $('.err-no-text').removeClass('.wiggle-animation');
   });
 
 });

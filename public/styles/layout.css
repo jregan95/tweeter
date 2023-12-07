@@ -27,6 +27,8 @@ body {
  
 body {
   font-family: 'Source Sans 3', sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .logo {
@@ -35,7 +37,46 @@ body {
 
 main {
   padding: 2em 0em 3em 0em;
-  width: 90%;
   margin: 0 auto;
+}
+
+
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    padding: 6em 3em 3em 3em;
+  }
+
+  .header {
+    height: 60em;
+    max-width: 30vw;
+    margin: 3em 3em 0em 0em;
+    /* padding-top: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: orange;
+    background-image: url(/images/transparent_cartographer.png);
+}
+
+.container {
+  overflow-x: hidden;
+  
+  
+}
+}
+
+@media only screen and (max-width: 1024px) {
+  
+
+  .container {
+    margin: 1.5em;
+  }
+
+
 }
 
