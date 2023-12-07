@@ -27,7 +27,7 @@ $(document).ready(function() {
           </div>
         <footer class="view-tweet-footer">
           <div>
-            <span class='time'>${tweetObj['created_at']}</span>
+            <span class='time'>${timeago.format(tweetObj['created_at'])}</span>
           </div>
           <div>
             <i class="fa-solid fa-flag"></i>
@@ -91,6 +91,8 @@ $form.on('submit', (event) => {
     }
   })
 })
+
+
  
 });
 
