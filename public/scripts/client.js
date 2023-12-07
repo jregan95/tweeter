@@ -103,14 +103,25 @@ $(document).ready(function() {
       /*It also addes a class to the error message so appropriate CSS stylings
       will ne applied which are delcared in new-tweet.css*/
       $('.err-no-text').addClass('wiggle-animation');
+      //Displays error message for 5 seconds then clears the text and animation.
+      setTimeout(function() {
+        $('.err-no-text').removeClass('wiggle-animation');
+        $('.err-no-text').text('');
+      }, 5000);
       return;
     }
 
     /*If the character length is greater than 140 it will print the provided
     error message and a class attribute*/
     if(characterLength >  140) {
+      let errContainer = ('.err-to-much-text')
       $('.err-to-much-text').text('K... why u write a novel? Only 140 chracters plz.');
       $('.err-to-much-text').addClass('wiggle-animation');
+
+      setTimeout(function() {
+        $('.err-to-much-text').removeClass('wiggle-animation');
+        $('.err-to-much-text').text('');
+      }, 5000);
       return;
     }
 
