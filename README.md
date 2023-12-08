@@ -38,4 +38,6 @@ The app has a responsive viewport for viewport width less then 1024px. This offe
 ### Desktop View
 
 !["Screenshot of desktop view"](https://github.com/jregan95/tweeter/blob/master/desktop-view.png?raw=true)
+
+###Mobile View
 !["Screenshot of mobile view"](https://github.com/jregan95/tweeter/blob/master/mobile-view.png?raw=true)
