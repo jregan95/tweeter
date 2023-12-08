@@ -57,3 +57,31 @@ name and username */
   display: flex;
   justify-content: space-between;
 }
+
+.fa-flag {
+  color: navy;
+  margin: 4px;
+}
+
+.fa-heart {
+  color: navy;
+  margin: 4px;
+}
+
+.fa-retweet {
+  color: navy;
+  margin: 4px;
+}
+
+/*The following 3 CSS hover styles turn the text red*/
+.fa-flag:hover {
+  color: red;
+}
+
+.fa-heart:hover {
+  color: red;
+}
+
+.fa-retweet:hover {
+  color: red;
+}

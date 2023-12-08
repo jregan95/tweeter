@@ -40,6 +40,8 @@ main {
 
 
 
+
+
 /* Use the following CSS styles with viewport sizes greater than 1024px */
 @media only screen and (min-width: 1024px) {
 
@@ -63,7 +65,7 @@ main {
 
   .container {
     overflow-x: hidden;
-    width: 100;
+    width: 100em;
   }
 }
 
