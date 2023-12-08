@@ -1,0 +1,38 @@
+
+.move-up-btn {
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.5em;
+  background-color: red;
+  display: none;
+  color: white;
+  
+}
+
+.fa-angles-up {
+  font-size: xx-large;
+}
+
+.move-up-btn:hover {
+  box-shadow: 3px 3px grey;
+  color: black;
+}
+
+.button-container {
+  text-align: right;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  
+
+  .move-up-btn {
+    width: 3em;
+    height: 3em;
+  }
+
+
+}
