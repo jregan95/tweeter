@@ -32,3 +32,10 @@ There are multiple interactive buttons on the page with different CSS sytlings. 
 ### Responsive Viewport
 
 The app has a responsive viewport for viewport width less then 1024px. This offers better user interaction no matter the device they are using. 
+
+## Screenshots
+
+### Desktop View
+
+!["Screenshot of desktop view"](https://github.com/jregan95/tweeter/blob/master/desktop-view.png?raw=true)
+!["Screenshot of mobile view"](https://github.com/jregan95/tweeter/blob/master/mobile-view.png?raw=true)
