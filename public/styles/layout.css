@@ -36,13 +36,13 @@ body {
 main {
   padding: 2em 0em 0em 0em;
   margin: 0 auto;
-  
 }
 
 
 
-/* Desktop styles */
+/* Use the following CSS styles with viewport sizes greater than 1024px */
 @media only screen and (min-width: 1024px) {
+
   .main-container {
     display: flex;
     flex-direction: row;
@@ -53,7 +53,6 @@ main {
     height: 60em;
     max-width: 30vw;
     margin: 3em 3em 0em 0em;
-    /* padding-top: 100px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,20 +61,19 @@ main {
     background-image: url(/images/transparent_cartographer.png);
 }
 
-.container {
-  overflow-x: hidden;
-  width: 100%
-  
-}
+  .container {
+    overflow-x: hidden;
+    width: 100;
+  }
 }
 
+
+/* Use the following CSS styles with viewport sizes less than 1024px */
 @media only screen and (max-width: 1024px) {
   
-
   .container {
     margin: 1.5em;
   }
-
 
 }
 
